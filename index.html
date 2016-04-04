@@ -659,9 +659,11 @@
 
 						<tr>
 							<td>blocking</td>
-							<td><pre>true</pre></td>
+							<td><pre>false</pre></td>
 							<td>
-								Whether or not to allow the user to dismiss the modal by clicking the overlay.
+								Whether or not to allow the user to dismiss the modal by clicking the overlay.<br />
+								<br />
+								This is overriden to <code>true</code> by default for all confirm and prompt modals.
 							</td>
 						</tr>
 
@@ -678,9 +680,27 @@
 							<td>theme</td>
 							<td><pre>$.sweetModal.THEME_LIGHT</pre></td>
 							<td>
-								Theme to use:<br />
+								Theme to use:<br /><br />
 								- <code>$.sweetModal.THEME_LIGHT</code><br />
-								- <code>$.sweetModal.THEME_DARK</code>
+								- <code>$.sweetModal.THEME_DARK</code><br />
+								- <code>$.sweetModal.THEME_MIXED</code><br />
+								<br />
+								You can also theme components individually (currently overlay and modal) by setting
+								this to an array containing a configuration of these constants:<br /><br />
+								- <code>$.sweetModal.THEME_COMPONENTS.LIGHT_OVERLAY</code><br />
+								- <code>$.sweetModal.THEME_COMPONENTS.LIGHT_MODAL</code><br />
+								- <code>$.sweetModal.THEME_COMPONENTS.DARK_OVERLAY</code><br />
+								- <code>$.sweetModal.THEME_COMPONENTS.DARK_MODAL</code><br />
+								<br />
+								Any non-provided component defaults to its LIGHT setting.
+							</td>
+						</tr>
+
+						<tr>
+							<td>width</td>
+							<td><pre>'auto'</pre></td>
+							<td>
+								Any width accepted by CSS, i.e. <code>256px</code>, <code>100%</code> or <code>4cm</code>.
 							</td>
 						</tr>
 
